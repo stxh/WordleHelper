@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <title>Wordle - A daily word game</title>
+    <meta name="description" content="Guess the hidden word in 6 tries. A new puzzle is available each day.">
+    <link rel="stylesheet" type="text/css" href="wordle.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8351390769516810"
+        crossorigin="anonymous"></script>
+    <script src="cash.min.js"></script>
+
+    <script language="javascript" type="text/javascript" src="wd.js"></script>
+
+</head>
+
+<body>
+
+    <game-app>
+
+
+        <header>
+            <div class="menu">
+                <button id="help-button" class="icon" aria-label="help">
+                    <game-icon icon="help"></game-icon>
+                </button>
+            </div>
+            <div class="title">
+                WordleHelper
+            </div>
+            <div class="menu">
+                <button id="statistics-button" class="icon" aria-label="statistics">
+                    <game-icon icon="statistics"></game-icon>
+                </button>
+                <button id="settings-button" class="icon" aria-label="settings">
+                    <game-icon icon="settings"></game-icon>
+                </button>
+            </div>
+        </header>
+
+        <div id="board-container">
+            <div id="board">
+                <game-row letters="" length="5">
+                    <div class="row">
+                        <game-tile>
+                            <div class="row-select">&gt;</div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                    </div>
+                </game-row>
+                <game-row letters="" length="5">
+                    <div class="row">
+                        <game-tile>
+                            <div class="row-select"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                    </div>
+                </game-row>
+                <game-row letters="" length="5">
+                    <div class="row">
+                        <game-tile>
+                            <div class="row-select"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                    </div>
+                </game-row>
+                <game-row letters="" length="5">
+                    <div class="row">
+                        <game-tile>
+                            <div class="row-select"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                    </div>
+                </game-row>
+                <game-row letters="" length="5">
+                    <div class="row">
+                        <game-tile>
+                            <div class="row-select"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                    </div>
+                </game-row>
+                <game-row letters="" length="5">
+                    <div class="row">
+                        <game-tile>
+                            <div class="row-select"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                        <game-tile>
+                            <div class="tile" data-state="empty" data-animation="idle"></div>
+                        </game-tile>
+                    </div>
+                </game-row>
+            </div>
+        </div>
+
+        <div class="input">
+            <input type="text" placeholder="Enter your word" />
+            <button type="button">Submit</button>
+        </div>
+
+        <game-word-list>
+            <div id="gwlist-container">
+                <div id="gwlist">
+                </div>
+            </div>
+        </game-word-list>
+
+    </game-app>
+</body>
+
+</html>
