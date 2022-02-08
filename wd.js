@@ -58,13 +58,12 @@ $(function () {
     $("body").on("click","span.gwlist", function () {
         //alert($(this).text());
         // $("game-row").eq(currentRow).prop("letters", $(this).text());
-        let word = $(this).text().split('');
-        let row = $("game-row").eq(currentRow);
-        word.forEach((c, index) => {
-            row.find(".tile").eq(index).text(c).attr('data-state', 'absent').attr('data-animation', 'flip-in');
-            row.find(".tile").eq(index).attr('data-animation', 'idle');
-        })
+        inputWord($(this).text(), currentRow);
     }); 
+
+    $("button").on("click", function () {
+        inputWord($("input").val(), currentRow);
+    })
     
     // initialize
     fillWordList(bestBegin);
@@ -74,6 +73,15 @@ $(function () {
 String.prototype.removeDuplicate = function() {
     const set = new Set(this.split(''))
     return [...set].join('')
+}
+
+function inputWord(input, curRow) {
+    let word = input.split('');
+    let row = $("game-row").eq(curRow);
+    word.forEach((c, index) => {
+        row.find(".tile").eq(index).text(c).attr('data-state', 'absent').attr('data-animation', 'flip-in');
+        // row.find(".tile").eq(index).attr('data-animation', 'idle');
+    });
 }
 
 function setRowSelector(row) {
