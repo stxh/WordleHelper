@@ -12,27 +12,25 @@ $(function () {
         let clickRow = $("game-row").index($(this).closest("game-row"));
         if (clickRow != currentRow) return false;
 
-        if ($(this).attr("data-state") != "present") 
-            $(this).attr("data-state", "present");
-        else
-        $(this).attr("data-state", "absent");
+        let dataState = $(this).attr("data-state");
 
-        $(this).attr('data-animation', 'flip-in');
-    });
-    
-    $(".tile").on("contextmenu", function () {
-        let clickRow = $("game-row").index($(this).closest("game-row"));
-        if (clickRow != currentRow) return false;
-        
-        if ($(this).attr("data-state") != "correct") 
-        $(this).attr("data-state", "correct");
-        else
-        $(this).attr("data-state", "absent");
-        
+        switch (dataState) {
+        case "absent":
+            $(this).attr("data-state", "present");
+            break;
+        case "present":
+            $(this).attr("data-state", "correct");
+            break;
+        case "correct":
+            $(this).attr("data-state", "absent");
+            break;
+        default:
+            break;
+        }
         $(this).attr('data-animation', 'flip-in');
         return false;
     });
-    
+        
     $(".row-select").on("click", function () {
         let row = $("game-row").eq(currentRow);
         let qus = row.find(".tile");
