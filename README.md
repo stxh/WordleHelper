@@ -1,5 +1,5 @@
 # WordleHelper
-Help to play wordle
+Help to play [wordle](https://www.nytimes.com/games/wordle/index.html)
 
 ## How to use
 
